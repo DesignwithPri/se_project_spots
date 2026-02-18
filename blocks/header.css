@@ -3,6 +3,9 @@
   background-color: #FFFFFFCC;
   border-top: none;
   border-bottom: none;
+
+  display: flex;
+  justify-content: center;
 }
 
 .header__content{
