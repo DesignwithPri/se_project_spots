@@ -43,7 +43,7 @@ The layout matches the TripleTen Figma design at different screen sizes.
    
 * [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
   
-  
+
 **Images**  
   
 ## Desktop View
@@ -55,4 +55,5 @@ The layout matches the TripleTen Figma design at different screen sizes.
 ## Mobile View
 ![Mobile](images/mobile.png)
   
-
+## Project Pitch Video
+Check out [this video](https://www.loom.com/share/eb54ebdc858e47c39c6af33b78aebfce), where I describe my project and some challenges I faced while building it.
