@@ -1,4 +1,13 @@
 .page {
-  background-color: #FCF5E5;
-  font-family: "Poppins", Arial, sans-serif;
+  background-color: #fcf5e5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  min-width: 320px;
+  min-height: 100vh;
+  border: none;
+  overflow-x: hidden;
+}
+
+body{
+  margin: 0;
+  padding: 0;
 }

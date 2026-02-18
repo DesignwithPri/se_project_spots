@@ -5,44 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Spots</title>
-
     <meta
       name="description"
       content="Spots project by Hannah Laguerre for TripleTen Web Development."
     />
     <meta name="author" content="Hannah Laguerre" />
-    <meta name="keywords" content="Spots, TripleTen, Web Development, Hannah Laguerre" />
+    <meta
+      name="keywords"
+      content="Spots, TripleTen, Web Development, Hannah Laguerre"
+    />
 
     <link rel="icon" href="favicon.ico" />
 
-    <link rel="stylesheet" href="vendor/normalize.css" />
-    <link rel="stylesheet" href="vendor/fonts.css" />
-    <link rel="stylesheet" href="pages/index.css" />
-    <link rel="stylesheet" href="blocks/page.css" />
+<link rel="stylesheet" href="vendor/normalize.css">
+<link rel="stylesheet" href="vendor/fonts.css">
+
+<link rel="stylesheet" href="blocks/page.css">
+<link rel="stylesheet" href="blocks/header.css">
+<link rel="stylesheet" href="blocks/profile.css">
+<link rel="stylesheet" href="blocks/cards.css">
+<link rel="stylesheet" href="blocks/card.css">
+<link rel="stylesheet" href="blocks/footer.css">
+
+<link rel="stylesheet" href="pages/index.css">
+
   </head>
 
   <body>
-
     <div class="page">
 
-    <header class="header">
-      <h1>Spots Project</h1>
-    </header>
+      <header class="header">
+        <div class="header__content">
+        <img class="header__logo" src="images/logo.png" alt="Spots" />
+        </div>
+      </header>
 
-    <main class="content">
-      <section class="profile">
-        <p>Profile section</p>
-      </section>
+      <main class="content">
+        <section class="profile">
+          <img class="profile__avatar" src="images/avatar.jpg" alt="Profile photo"
+          />
 
-      <section class="cards">
-        <p>Cards section</p>
-      </section>
-    </main>
+          <div class="profile__info">
+            <h1 class="profile__name">
+              Bessie Coleman
+            </h1>
+            <p class="profile__job">Civil Aviator
+            </p>
 
-    <footer class="footer">
-      <p>© 2026 Hannah Laguerre</p>
-    </footer>
+            <button class="profile__edit-button" type="button">
+             <img src="images/edit-icon.svg" alt="" class="profile__edit-icon"/>
+              Edit profile
+            </button>
+          </div>
 
-  </div>
+          <button class="profile__add-button" type="button">
+            <img src="images/plus-sign.svg" alt="" class="profile__add-icon"/> 
+           New Post
+          </button>
+        </section>
+
+        <section class="cards">
+  <ul class="cards__list">
+    <li class="card">
+      <img class="card__image" src="images/val-thorens.png" alt="Val Thorens" />
+      <div class="card__content">
+        <h2 class="card__title">Val Thorens</h2>
+        <button class="card__like-button" type="button" aria-label="Like"></button>
+      </div>
+    </li>
+
+    <li class="card">
+      <img class="card__image" src="images/2-photo-by-ceiline-from-pexels.jpg" alt="Restaurant terrace" />
+      <div class="card__content">
+        <h2 class="card__title">Restaurant terrace</h2>
+        <button class="card__like-button" type="button" aria-label="Like"></button>
+      </div>
+    </li>
+
+    <li class="card">
+      <img class="card__image" src="images/3-photo-by-tubanur-dogan-from-pexels.jpg" alt="An outdoor cafe" />
+      <div class="card__content">
+        <h2 class="card__title">An outdoor cafe</h2>
+        <button class="card__like-button" type="button" aria-label="Like"></button>
+      </div>
+    </li>
+
+    <li class="card">
+      <img class="card__image" src="images/4-photo-by-maurice-laschet-from-pexels.jpg" alt="A very long bridge" />
+      <div class="card__content">
+        <h2 class="card__title">A very long bridge, over the forest…</h2>
+        <button class="card__like-button" type="button" aria-label="Like"></button>
+      </div>
+    </li>
+
+    <li class="card">
+      <img class="card__image" src="images/5-photo-by-van-anh-nguyen-from-pexels.jpg" alt="Tunnel with morning light" />
+      <div class="card__content">
+        <h2 class="card__title">Tunnel with morning light</h2>
+        <button class="card__like-button" type="button" aria-label="Like"></button>
+      </div>
+    </li>
+
+    <li class="card">
+      <img class="card__image" src="images/6-photo-by-moritz-feldmann-from-pexels.jpg" alt="Mountain house" />
+      <div class="card__content">
+        <h2 class="card__title">Mountain house</h2>
+        <button class="card__like-button" type="button" aria-label="Like"></button>
+      </div>
+    </li>
+  </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__copyright">© 2026 Hannah Laguerre</p>
+      </footer>
+    </div>
   </body>
 </html>
