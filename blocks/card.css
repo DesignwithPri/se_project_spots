@@ -31,18 +31,20 @@
   text-overflow: ellipsis;
 }
 
-.card__like-button:hover {
-  opacity: 1;
+.card__like-button {
   width: 22px;
   height: 20px;
   border: none;
+  padding: 0;
   display: block;
 
   background: url("../images/heart.png") center/contain no-repeat;
   background-color: transparent;
-  padding: 0;
 
   cursor: pointer;
+  opacity: 0.6;
+}
 
-  border-radius: 4px;
+.card__like-button:hover {
+  opacity: 1;
 }
