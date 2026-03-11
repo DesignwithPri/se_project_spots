@@ -1,5 +1,6 @@
 .modal {
     visibility: hidden;
+    opacity: 0;
     background-color: #00000080;
     position: fixed;
     top: 0;
@@ -8,14 +9,13 @@
     left: 0;
     display: flex;
     justify-content: center;
+    font-family: "Poppins";
     align-items: center;
-}
-
-.modal{
-font-family: "Poppins";
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal_is-opened{
+    opacity: 1;
     visibility: visible;
 }
 
@@ -30,6 +30,8 @@ font-family: "Poppins";
     flex-direction: column;
     display: flex;
     gap: 32px;
+    transform: transaaform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .modal__close-btn{

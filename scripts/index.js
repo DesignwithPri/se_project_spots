@@ -34,8 +34,22 @@ const newPostModal = document.querySelector("#new-post-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
+const profileName = document.querySelector(".profile__name");
+const profileJob = document.querySelector(".profile__job");
+
+const nameInput = document.querySelector("#profile-name-input");
+const descriptionInput = document.querySelector("#profile-description-input");
+
+const editProfileForm = document.forms["edit-profile"];
+
+const addCardFormElement = document.forms["new-post"];
+const cardCaptionInput = document.querySelector("#card-caption-input");
+const cardImageInput = document.querySelector("#card-image-input");
+
 // Open Edit Profile modal
 editProfileBtn.addEventListener("click", function () {
+  nameInput.value = profileName.textContent;
+  descriptionInput.value = profileJob.textContent;
   editProfileModal.classList.add("modal_is-opened");
 });
 
@@ -54,6 +68,28 @@ newPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
 });
 
-initialCards.forEach(function(card) {
+// Handle Edit Profile form submission
+editProfileForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = descriptionInput.value;
+
+  editProfileModal.classList.remove("modal_is-opened");
+});
+
+function handleAddCardSubmit(evt) {
+  evt.preventDefault();
+
+  console.log(cardCaptionInput.value);
+  console.log(cardImageInput.value);
+
+  newPostModal.classList.remove("modal_is-opened");
+}
+
+addCardFormElement.addEventListener("submit", handleAddCardSubmit);
+
+initialCards.forEach(function (card) {
   console.log(card.name);
 });
+
