@@ -11,7 +11,7 @@
     justify-content: center;
     font-family: "Poppins";
     align-items: center;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .modal_is-opened{
