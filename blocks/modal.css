@@ -30,8 +30,12 @@
     flex-direction: column;
     display: flex;
     gap: 32px;
-    transform: transaaform 0.3s ease;
+    transform: transform 0.3s ease;
     transition: transform 0.3s ease;
+}
+
+.modal__close-btn:hover{
+    opacity:0.7;
 }
 
 .modal__close-btn{
@@ -80,7 +84,7 @@ gap: 8px;
 font-size: 12px;
 color: rgba(33,33,33,0.7);
 width: 100%;
-opacity: 65%;
+opacity: 75%;
 }
 
 .modal__input{
@@ -99,6 +103,10 @@ font-size: 16px;
 color: #2121214d;
 font-size: 20px;
 font-weight: 500;
+}
+
+.modal__submit-btn:hover{
+    opacity:0.7;
 }
 
 .modal__submit-btn{

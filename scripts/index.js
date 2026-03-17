@@ -46,6 +46,8 @@ const addCardFormElement = document.forms["new-post"];
 const cardCaptionInput = document.querySelector("#card-caption-input");
 const cardImageInput = document.querySelector("#card-image-input");
 
+const cardsList = document.querySelector(".cards__list");
+
 // Open Edit Profile modal
 editProfileBtn.addEventListener("click", function () {
   nameInput.value = profileName.textContent;
@@ -81,9 +83,23 @@ editProfileForm.addEventListener("submit", function (evt) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
-  console.log(cardCaptionInput.value);
-  console.log(cardImageInput.value);
+  const cardTitle = cardCaptionInput.value;
+  const cardImage = cardImageInput.value;
 
+  const cardElement = document.createElement("li");
+  cardElement.classList.add("card");
+
+   cardElement.innerHTML = `
+    <img class="card__image" src="${cardImage}" alt="${cardTitle}">
+    <div class="card__content">
+      <h2 class="card__title">${cardTitle}</h2>
+      <button class="card__like-button" type="button" aria-label="Like"></button>
+    </div>
+  `;
+
+cardsList.prepend(cardElement);
+
+  addCardFormElement.reset();
   newPostModal.classList.remove("modal_is-opened");
 }
 
