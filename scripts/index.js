@@ -1,28 +1,28 @@
 const initialCards = [
   {
     name: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/val-thorens.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/val-thorens.jpg",
   },
   {
     name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/restaurant-terrace.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/restaurant-terrace.jpg",
   },
   {
     name: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/outdoor-cafe.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/outdoor-cafe.jpg",
   },
   {
     name: "A very long bridge",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/long-bridge.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/long-bridge.jpg",
   },
   {
     name: "Tunnel with morning light",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/tunnel.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/tunnel.jpg",
   },
   {
     name: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/mountain-house.jpg"
-  }
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/places/mountain-house.jpg",
+  },
 ];
 
 const editProfileBtn = document.querySelector(".profile__edit-button");
@@ -89,7 +89,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = document.createElement("li");
   cardElement.classList.add("card");
 
-   cardElement.innerHTML = `
+  cardElement.innerHTML = `
     <img class="card__image" src="${cardImage}" alt="${cardTitle}">
     <div class="card__content">
       <h2 class="card__title">${cardTitle}</h2>
@@ -97,7 +97,7 @@ function handleAddCardSubmit(evt) {
     </div>
   `;
 
-cardsList.prepend(cardElement);
+  cardsList.prepend(cardElement);
 
   addCardFormElement.reset();
   newPostModal.classList.remove("modal_is-opened");
@@ -108,4 +108,3 @@ addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach(function (card) {
   console.log(card.name);
 });
-

@@ -1,6 +1,6 @@
-.header{
-  width:100%;
-  background-color: #FFFFFFCC;
+.header {
+  width: 100%;
+  background-color: #ffffffcc;
   border-top: none;
   border-bottom: none;
 
@@ -8,16 +8,16 @@
   justify-content: center;
 }
 
-.header__content{
+.header__content {
   max-width: 1280px;
   margin: 0 auto;
   height: 46px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
-.header__logo{
+.header__logo {
   display: block;
   height: 46px;
 }
