@@ -107,6 +107,14 @@
     gap: 20px;
   }
 
+  .profile__info {
+    align-items: flex-start;
+  }
+
+  .profile__avatar{
+    align-self: center;
+  }
+
   .profile__add-button {
     align-self: stretch;
     justify-content: center;
