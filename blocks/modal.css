@@ -36,6 +36,13 @@
   transition: transform 0.3s ease;
 }
 
+.modal__container_type_preview {
+  background-color: transparent;
+  padding: 0;
+  width: auto;
+  max-width: unset;
+}
+
 .modal__close-btn:hover {
   opacity: 0.7;
 }
@@ -120,4 +127,18 @@
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+
+.modal__image{
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 16px;
 }
