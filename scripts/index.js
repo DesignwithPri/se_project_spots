@@ -26,7 +26,7 @@ const initialCards = [
   {
     name: "Landscape",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
-  }
+  },
 ];
 
 const editProfileBtn = document.querySelector(".profile__edit-button");
@@ -74,6 +74,7 @@ function getCardElement(data) {
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
   const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".card__delete-button");
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
@@ -81,6 +82,10 @@ function getCardElement(data) {
 
   likeButton.addEventListener("click", function () {
     likeButton.classList.toggle("card__like-button_liked");
+  });
+
+  deleteButton.addEventListener("click", function () {
+    cardElement.remove();
   });
 
   cardImage.addEventListener("click", function () {

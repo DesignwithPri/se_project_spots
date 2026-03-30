@@ -16,13 +16,15 @@
 
 @media screen and (max-width: 1320px) {
   .cards__list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 413px);
+    justofy-content: center;
   }
 }
 
 /* mobile */
 @media screen and (max-width: 630px) {
   .cards__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 288px;
+    justify-content: center;
   }
 }

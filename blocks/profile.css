@@ -83,7 +83,6 @@
   margin-left: auto;
   align-self: center;
 
-  margin-left: auto;
   margin-top: auto;
 
   padding: 12px 20px;
@@ -111,7 +110,7 @@
     align-items: flex-start;
   }
 
-  .profile__avatar{
+  .profile__avatar {
     align-self: center;
   }
 

@@ -57,3 +57,8 @@ The layout matches the TripleTen Figma design at different screen sizes.
   
 ## Project Pitch Video
 Check out [this video](https://www.loom.com/share/eb54ebdc858e47c39c6af33b78aebfce), where I describe my project and some challenges I faced while building it.
+
+## Live Project
+
+Deployed on GitHub Pages:
+ https://designwithpri.github.io/se_project_spots/
