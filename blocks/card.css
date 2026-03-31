@@ -70,14 +70,17 @@
   right: 10px;
   width: 20px;
   height: 20px;
-  background: url("../images/delete\ -\ icon.png") center/contain no-repeat;
+  background: url(../images/delete-icon.png) center/contain no-repeat;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
 .card__delete-button:hover {
-  background-image: url("../images/delete-hover.png");
+  background-image:none;
+  background-color: red;
 }
+
 @media screen and (max-width: 630px) {
   .card__image {
     height: 288px;
