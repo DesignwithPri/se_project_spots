@@ -62,3 +62,15 @@ Check out [this video](https://www.loom.com/share/eb54ebdc858e47c39c6af33b78aebf
 
 Deployed on GitHub Pages:
  https://designwithpri.github.io/se_project_spots/
+
+ ## Features
+- Edit profile modal
+- Add new posts
+- Like/unlike cards
+- Delete cards
+- Image preview modal
+
+## Technologies
+- HTML
+- CSS (BEM)
+- JavaScript
