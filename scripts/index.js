@@ -1,3 +1,12 @@
+const validationSettings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible"
+};
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -60,10 +69,21 @@ const cardTemplate = document.querySelector("#card-template");
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscape);
+}
+
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
 }
 
 function getCardElement(data) {
@@ -101,6 +121,9 @@ function getCardElement(data) {
 editProfileBtn.addEventListener("click", function () {
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileJob.textContent;
+
+    resetValidation(editProfileForm, editProfileInputList, validationSettings);
+
   openModal(editProfileModal);
 });
 
@@ -129,6 +152,8 @@ editProfileForm.addEventListener("submit", function (evt) {
   closeModal(editProfileModal);
 });
 
+enableValidation(validationSettings);
+
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
@@ -141,6 +166,9 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardElement);
 
   addCardFormElement.reset();
+
+   resetValidation(addCardFormElement, addCardInputList, validationSettings);
+
   closeModal(newPostModal);
 }
 
@@ -149,4 +177,22 @@ addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach(function (card) {
   const cardElement = getCardElement(card);
   cardsList.prepend(cardElement);
+});
+
+const editProfileInputList = Array.from(
+  editProfileForm.querySelectorAll(".modal__input")
+);
+
+const addCardInputList = Array.from(
+  addCardFormElement.querySelectorAll(".modal__input")
+);
+
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach(function (modal) {
+  modal.addEventListener("click", function (evt) {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
 });

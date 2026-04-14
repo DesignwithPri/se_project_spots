@@ -135,3 +135,26 @@
   color: #fff;
   font-size: 16px;
 }
+
+.modal__input_type_error {
+  border: 1px solid #ff0000;
+}
+
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #ff0000;
+  min-height: 14px;
+}
+
+.modal__error_visible {
+  visibility: visible;
+}
+
+.modal__submit-btn_disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
