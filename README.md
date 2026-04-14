@@ -55,8 +55,14 @@ The layout matches the TripleTen Figma design at different screen sizes.
 ## Mobile View
 ![Mobile](images/mobile.png)
   
-## Project Pitch Video
-Check out [this video](https://www.loom.com/share/eb54ebdc858e47c39c6af33b78aebfce), where I describe my project and some challenges I faced while building it.
+## Project Pitch Videos
+
+Check out these videos, where I describe my project
+and some challenges I faced while building it:
+
+- [First Video Title] (https://www.loom.com/share/eb54ebdc858e47c39c6af33b78aebfce)
+- [Second Video Title](https://www.loom.com/share/02e45e15f84a467aa7525c5111075eee)
+
 
 ## Live Project
 
