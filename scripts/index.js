@@ -4,7 +4,7 @@ const validationSettings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible"
+  errorClass: "modal__error_visible",
 };
 
 const initialCards = [
@@ -122,7 +122,7 @@ editProfileBtn.addEventListener("click", function () {
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileJob.textContent;
 
-    resetValidation(editProfileForm, editProfileInputList, validationSettings);
+  resetValidation(editProfileForm, editProfileInputList, validationSettings);
 
   openModal(editProfileModal);
 });
@@ -152,8 +152,6 @@ editProfileForm.addEventListener("submit", function (evt) {
   closeModal(editProfileModal);
 });
 
-enableValidation(validationSettings);
-
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
@@ -167,7 +165,7 @@ function handleAddCardSubmit(evt) {
 
   addCardFormElement.reset();
 
-   resetValidation(addCardFormElement, addCardInputList, validationSettings);
+  resetValidation(addCardFormElement, addCardInputList, validationSettings);
 
   closeModal(newPostModal);
 }
@@ -180,11 +178,11 @@ initialCards.forEach(function (card) {
 });
 
 const editProfileInputList = Array.from(
-  editProfileForm.querySelectorAll(".modal__input")
+  editProfileForm.querySelectorAll(".modal__input"),
 );
 
 const addCardInputList = Array.from(
-  addCardFormElement.querySelectorAll(".modal__input")
+  addCardFormElement.querySelectorAll(".modal__input"),
 );
 
 const modals = document.querySelectorAll(".modal");

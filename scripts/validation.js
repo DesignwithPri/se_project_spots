@@ -1,3 +1,12 @@
+const validationSettings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
 
@@ -16,7 +25,12 @@ const hideInputError = (formElement, inputElement, settings) => {
 
 const checkInputValidity = (formElement, inputElement, settings) => {
   if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage, settings);
+    showInputError(
+      formElement,
+      inputElement,
+      inputElement.validationMessage,
+      settings,
+    );
   } else {
     hideInputError(formElement, inputElement, settings);
   }
@@ -40,9 +54,11 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
 
 const setEventListeners = (formElement, settings) => {
   const inputList = Array.from(
-    formElement.querySelectorAll(settings.inputSelector)
+    formElement.querySelectorAll(settings.inputSelector),
   );
-  const buttonElement = formElement.querySelector(settings.submitButtonSelector);
+  const buttonElement = formElement.querySelector(
+    settings.submitButtonSelector,
+  );
 
   toggleButtonState(inputList, buttonElement, settings);
 
@@ -63,7 +79,9 @@ const enableValidation = (settings) => {
 };
 
 const resetValidation = (formElement, inputList, settings) => {
-  const buttonElement = formElement.querySelector(settings.submitButtonSelector);
+  const buttonElement = formElement.querySelector(
+    settings.submitButtonSelector,
+  );
 
   inputList.forEach((inputElement) => {
     hideInputError(formElement, inputElement, settings);
@@ -71,3 +89,5 @@ const resetValidation = (formElement, inputList, settings) => {
 
   toggleButtonState(inputList, buttonElement, settings);
 };
+
+enableValidation(validationSettings);
