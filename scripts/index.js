@@ -1,12 +1,3 @@
-const validationSettings = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__submit-btn_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
-};
-
 const initialCards = [
   {
     name: "Val Thorens",
@@ -118,12 +109,18 @@ function getCardElement(data) {
   return cardElement;
 }
 
+const editProfileInputList = Array.from(
+  editProfileForm.querySelectorAll(".modal__input")
+);
+
+const addCardInputList = Array.from(
+  addCardFormElement.querySelectorAll(".modal__input")
+);
+
 editProfileBtn.addEventListener("click", function () {
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileJob.textContent;
-
   resetValidation(editProfileForm, editProfileInputList, validationSettings);
-
   openModal(editProfileModal);
 });
 
@@ -132,6 +129,7 @@ editProfileCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
+  resetValidation(addCardFormElement, addCardInputList, validationSettings);
   openModal(newPostModal);
 });
 
@@ -145,10 +143,8 @@ previewModalCloseBtn.addEventListener("click", function () {
 
 editProfileForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
-
   profileName.textContent = nameInput.value;
   profileJob.textContent = descriptionInput.value;
-
   closeModal(editProfileModal);
 });
 
@@ -164,9 +160,7 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardElement);
 
   addCardFormElement.reset();
-
   resetValidation(addCardFormElement, addCardInputList, validationSettings);
-
   closeModal(newPostModal);
 }
 
@@ -176,14 +170,6 @@ initialCards.forEach(function (card) {
   const cardElement = getCardElement(card);
   cardsList.prepend(cardElement);
 });
-
-const editProfileInputList = Array.from(
-  editProfileForm.querySelectorAll(".modal__input"),
-);
-
-const addCardInputList = Array.from(
-  addCardFormElement.querySelectorAll(".modal__input"),
-);
 
 const modals = document.querySelectorAll(".modal");
 
