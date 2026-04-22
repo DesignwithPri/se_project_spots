@@ -48,7 +48,6 @@ const profileJob = document.querySelector(".profile__job");
 
 const nameInput = document.querySelector("#profile-name-input");
 const descriptionInput = document.querySelector("#profile-description-input");
-
 const editProfileForm = document.forms["edit-profile"];
 
 const addCardFormElement = document.forms["new-post"];
@@ -179,4 +178,4 @@ modals.forEach(function (modal) {
       closeModal(modal);
     }
   });
-});
+}); 

@@ -102,12 +102,13 @@
 @media screen and (max-width: 630px) {
   .profile {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;   
     gap: 20px;
   }
 
   .profile__info {
-    align-items: flex-start;
+    align-items: center;   
+    text-align: center;    
   }
 
   .profile__avatar {
@@ -115,6 +116,7 @@
   }
 
   .profile__add-button {
+    width: 100%;           
     align-self: stretch;
     justify-content: center;
   }

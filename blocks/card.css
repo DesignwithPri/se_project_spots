@@ -57,7 +57,11 @@
 }
 
 .card__like-button_liked {
-  background-image: url("../images/liked-icon.svg");
+  background-image: url("../images/Liked.svg");
+}
+
+.card__like-button_liked:hover {
+  opacity: 1;
 }
 
 .card__like-button:hover {
