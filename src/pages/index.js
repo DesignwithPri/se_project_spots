@@ -1,3 +1,11 @@
+import "./index.css";
+
+import {
+  validationSettings,
+  enableValidation,
+  resetValidation
+} from "../scripts/validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -56,6 +64,8 @@ const cardImageInput = document.querySelector("#card-image-input");
 
 const cardsList = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template");
+
+enableValidation(validationSettings);
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
