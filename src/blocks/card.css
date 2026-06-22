@@ -78,13 +78,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 
 .card__delete-button:hover {
-  background-image: none;
-  background-color: red;
+  opacity: 0.8;
 }
-
 @media screen and (max-width: 630px) {
   .card__image {
     height: 288px;

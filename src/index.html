@@ -16,7 +16,6 @@
     />
 
     <link rel="icon" href="./images/favicon.ico" />
-
   </head>
 
   <body>
@@ -29,11 +28,13 @@
 
       <main class="content">
         <section class="profile">
-          <img
-            class="profile__avatar"
-            src="images/avatar.jpg"
-            alt="Profile photo"
-          />
+          <button class="profile__avatar-button" type="button">
+            <img
+              class="profile__avatar"
+              src="images/avatar.jpg"
+              alt="Profile photo"
+            />
+          </button>
 
           <div class="profile__info">
             <h1 class="profile__name">Bessie Coleman</h1>
@@ -88,7 +89,7 @@
               maxlength="40"
               required
             />
-            <span class="modal__error" id="profile-name-input-error"></span>
+            <span class="modal__error" id="profile-name-input-error"> </span>
           </label>
 
           <label for="profile-description-input" class="modal__label">
@@ -102,7 +103,10 @@
               maxlength="200"
               required
             />
-            <span class="modal__error" id="profile-description-input-error"></span>
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
           </label>
 
           <button type="submit" class="modal__submit-btn">Save</button>
@@ -154,6 +158,66 @@
         </form>
       </div>
     </div>
+    <!-- Avatar Modal -->
+    <div class="modal" id="edit-avatar-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close-btn" aria-label="Close">
+          <img
+            src="images/close-icon.png"
+            alt="Close"
+            class="modal__close-icon"
+          />
+        </button>
+
+        <h2 class="modal__title">Change profile picture</h2>
+
+        <form class="modal__form" name="edit-avatar" novalidate>
+          <label for="profile-avatar-input" class="modal__label">
+            Avatar URL
+
+            <input
+              id="profile-avatar-input"
+              type="url"
+              class="modal__input"
+              placeholder="Image URL"
+              required
+            />
+            <span class="modal__error" id="profile-avatar-input-error"> </span>
+          </label>
+
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
+    </div>
+
+  <!-- Delete Confirmation Modal -->
+<div class="modal" id="delete-modal">
+  <div class="modal__container">
+    <button type="button" class="modal__close-btn" aria-label="Close">
+      <img
+        src="images/close-icon.png"
+        alt="Close"
+        class="modal__close-icon"
+      />
+    </button>
+
+    <h2 class="modal__title">Are you sure you want to delete this image?</h2>
+
+    <form class="modal__form modal__form_type_delete" name="delete-card">
+  <div class="modal__delete-buttons">
+    <button
+      type="submit"
+      class="modal__submit-btn modal__submit-btn_type_delete"
+    >
+      Delete
+    </button>
+
+    <button type="button" class="modal__cancel-btn">Cancel</button>
+  </div>
+</form>
+  </div>
+</div>  
+
     <template id="card-template">
       <li class="card">
         <button
