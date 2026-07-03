@@ -78,7 +78,7 @@ and some challenges I faced while building it:
 
 - [First Video Title] (https://www.loom.com/share/eb54ebdc858e47c39c6af33b78aebfce)
 - [Second Video Title](https://www.loom.com/share/02e45e15f84a467aa7525c5111075eee)
-- [Third Video Title] ()
+- [Third Video Title] (https://www.loom.com/share/9bc45930dc444a7e9a70f6f340cecc59)
 
 ## Live Project
 
